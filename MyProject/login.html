@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>تسجيل الدخول</h2>
+        <form id="loginForm">
+            <label for="username-email">البريد الإلكتروني أو اسم المستخدم</label>
+            <input type="text" id="username-email" placeholder="أدخل بريدك الإلكتروني أو اسم المستخدم" required>
+
+            <label for="password">كلمة المرور</label>
+            <input type="password" id="password" placeholder="أدخل كلمة المرور الخاصة بك" required>
+
+            <button type="submit">تسجيل الدخول</button>
+            <p id="error-message" style="color: red; display: none;">البريد الإلكتروني/اسم المستخدم أو كلمة المرور غير صحيحة</p>
+        </form>
+        <p>
+            <a href="signup.html">إنشاء حساب</a> | 
+            <a href="reset-password.html">نسيت كلمة المرور؟</a>
+            
+        </p>
+    </div>
+
+    <script>
+        // إضافة حدث عند تقديم النموذج
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // جلب البيانات المدخلة
+            const enteredUsernameOrEmail = document.getElementById("username-email").value.trim();
+            const enteredPassword = document.getElementById("password").value.trim();
+
+            // جلب البيانات المخزنة في LocalStorage
+            const storedUsername = localStorage.getItem("username");
+            const storedEmail = localStorage.getItem("email");
+            const storedPassword = localStorage.getItem("password");
+
+            // التحقق من صحة البيانات
+            if (
+                (enteredUsernameOrEmail === storedUsername || enteredUsernameOrEmail === storedEmail) &&
+                enteredPassword === storedPassword
+            ) {
+                // إذا كانت البيانات صحيحة، الانتقال إلى الملف الشخصي
+                window.location.href = "Home.html";
+            } else {
+                // عرض رسالة خطأ إذا كانت البيانات غير صحيحة
+                document.getElementById("error-message").style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

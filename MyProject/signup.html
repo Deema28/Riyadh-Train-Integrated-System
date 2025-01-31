@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>إنشاء حساب</h2>
+        <form id="signupForm">
+            <label for="username">اسم المستخدم</label>
+            <input type="text" id="username" placeholder="أدخل اسم المستخدم" required>
+        
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+        
+            <label for="password">كلمة المرور</label>
+            <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+        
+            <label for="confirm-password">تأكيد كلمة المرور</label>
+            <input type="password" id="confirm-password" placeholder="أعد إدخال كلمة المرور" required>
+        
+            <button type="submit">إنشاء حساب</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // منع إعادة تحميل الصفحة
+
+            // الحصول على القيم المدخلة
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            // التحقق من أن كلمة المرور متطابقة
+            if (password !== confirmPassword) {
+                alert("كلمتا المرور غير متطابقتين!");
+                return;
+            }
+
+            // تخزين البيانات في localStorage
+            localStorage.setItem("username", username);
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+
+            // نقل المستخدم إلى صفحة الملف الشخصي
+            window.location.href = "Home.html";
+        });
+    </script>
+</body>
+</html>
