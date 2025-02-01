@@ -55,10 +55,7 @@
             const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value.trim();
 
-              // عرض بيانات المستخدم من localStorage
-        document.getElementById("username").textContent = localStorage.getItem("username") || "اسم المستخدم";
-        document.getElementById("email").textContent = localStorage.getItem("email") || "email@example.com";
-        document.getElementById("password").textContent = localStorage.getItem("password") || "********";
+        
 
             // تسجيل الدخول عبر Firebase Authentication
             signInWithEmailAndPassword(auth, email, password)
