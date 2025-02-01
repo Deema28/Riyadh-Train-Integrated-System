@@ -1,3 +1,4 @@
+
 /* إعدادات عامة */
 body {
     font-family: Arial, sans-serif;
@@ -10,7 +11,7 @@ body {
 
 /* رأس الصفحة */
 .header {
-    background-color: #0078D7;
+    background-color:   #FDE585;
     color: white;
     padding: 20px;
     margin-bottom: 20px;
@@ -35,7 +36,7 @@ body {
 .search-container button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #0078D7;
+    background-color: #FDE585;
     color: white;
     border: none;
     border-radius: 5px;
@@ -44,7 +45,7 @@ body {
 }
 
 .search-container button:hover {
-    background-color: #0056b3;
+    background-color: #f4a42d;
 }
 
 /* تنسيق الجدول */
@@ -59,7 +60,7 @@ table {
 }
 
 thead {
-    background-color: #0078D7;
+    background-color:  #FDE585;
     color: white;
 }
 
@@ -86,11 +87,13 @@ tbody tr:hover {
 .back-button {
     margin: 20px auto;
 }
-
+.back-button:hover {
+    transform: scale(1.05);
+}
 .back-button .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0078D7;
+    background-color:  #FDE585;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -99,5 +102,5 @@ tbody tr:hover {
 }
 
 .back-button .btn:hover {
-    background-color: #0056b3;
+    background-color: #f4a42d;
 }
