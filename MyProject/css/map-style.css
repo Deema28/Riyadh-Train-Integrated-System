@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-    background-color: #4c3c81;
+    background-color: #453E80;
     color: white;
     padding: 20px;
     font-size: 24px;
@@ -49,6 +49,9 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.btn:hover {
+    transform: scale(1.05);
+}
 .btn:hover {
     background-color: #342960;
 }
