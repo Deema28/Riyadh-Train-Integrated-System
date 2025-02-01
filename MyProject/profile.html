@@ -1,51 +1,52 @@
 
-<!DOCTYPE html> 
-<html lang="ar" dir="rtl"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>ملفي الشخصي</title> 
-    <link rel="stylesheet" href="css/profile-style.css"> 
-</head> 
-<body> 
-    <div class="profile-container"> 
-        <header> 
-            <h1>ملفي الشخصي</h1> 
-        </header> 
- 
-        <div class="profile-details"> 
-            <!-- updated--> 
-            <div class="userDetailsContiner"> 
-            <p>اسم المستخدم: <span id="username">---</span></p> 
-        </div> 
- 
-          <div class="userDetailsContiner"> 
-            <p>البريد الإلكتروني: <span id="email">---</span></p> 
-        </div> 
- 
-        <div class="userDetailsContiner"> 
-            <p>كلمة المرور: <span id="password">---</span></p> 
-        </div> 
- 
-        </div> 
- 
-        <div class="buttons"> 
-            <button onclick="logout()">تسجيل خروج</button> 
-            <a href="home.html" class="btn-home">العودة إلى الصفحة الرئيسية</a> 
-        </div> 
-    </div> 
- 
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملفي الشخصي</title>
+    <link rel="stylesheet" href="css/profile-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="profile-container">
+        <header>
+            ملفي الشخصي
+            <div class="profile-icon">
+                <i class="fa-solid fa-user-circle"></i>
+            </div>
+        </header>
+        <div class="profile-details">
+            <div class="userDetailsContiner">
+                <p>اسم المستخدم: <strong id="username">---</strong></p>
+            </div>
+            <div class="userDetailsContiner">
+                <p>البريد الإلكتروني: <strong id="email">---</strong></p>
+            </div>
+            <div class="userDetailsContiner">
+                <p>كلمة المرور: <strong id="password">---</strong></p>
+            </div>
+        </div>
+        <div class="buttons">
+            <a href="#" class="logout-btn" onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i> تسجيل خروج
+            </a>
+            <a href="home.html" class="home-btn">
+                <i class="fa-solid fa-arrow-left"></i> العودة إلى الصفحة الرئيسية
+            </a>
+        </div>
+    </div>
+
     <script>
-        // عرض بيانات المستخدم من localStorage
         document.getElementById("username").textContent = localStorage.getItem("username") || "اسم المستخدم";
         document.getElementById("email").textContent = localStorage.getItem("email") || "email@example.com";
-        document.getElementById("password").textContent = localStorage.getItem("password") || "********";
+        document.getElementById("password").textContent = localStorage.getItem("password") || "**";
 
-        // وظيفة تسجيل الخروج
         function logout() {
             localStorage.clear();
             window.location.href = "login.html";
         }
     </script>
-</body> 
+</body>
 </html>
