@@ -1,4 +1,5 @@
 
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -63,8 +64,7 @@ body {
     font-size: 20px;
     text-align: center;
     color: white;
-    text-decoration: none;
-    
+    text-decoration: none; /* إزالة الخط تحت النص */
 }
 
 /* الأيقونات */
@@ -79,6 +79,12 @@ body {
     flex: 1; /* يجعل النص يأخذ المساحة المتبقية */
     text-align: center; /* النص في المنتصف */
     color: white;
+}
+
+/* إزالة الخط الأبيض أسفل النص */
+.menu-btn a {
+    text-decoration: none; /* تأكيد إزالة الخط */
+    color: inherit; /* استخدام لون العنصر الرئيسي */
 }
 
 /* تأثير عند تمرير الفأرة */
@@ -101,5 +107,4 @@ body {
 
 .orange {
     background-color: #FFCA7D;
-    text-decoration: none;
 }
