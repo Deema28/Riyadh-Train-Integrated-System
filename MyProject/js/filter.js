@@ -1,30 +1,63 @@
 
 // بيانات المحطات
 const stations = {
-    "محطة العليا": {
-        metroLine: "الخط الأحمر",
+  
+    "محطة طويق": {
+        metroLine: "المسار البرتقالي",
         schedule: [
-            { departure: "08:00 صباحًا", arrival: "08:15 صباحًا" },
-            { departure: "10:00 صباحًا", arrival: "10:20 صباحًا" },
-            { departure: "12:00 مساءً", arrival: "12:15 مساءً" }
-        ]
-    },
-    "محطة قصر الحكم": {
-        metroLine: "الخط الأزرق",
-        schedule: [
-            { departure: "09:00 صباحًا", arrival: "09:20 صباحًا" },
-            { departure: "11:00 صباحًا", arrival: "11:20 صباحًا" },
-            { departure: "01:00 مساءً", arrival: "01:20 مساءً" }
+            { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
+            { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
+            { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
+           
         ]
     },
     "محطة جامعة الملك سعود": {
-        metroLine: "الخط الأخضر",
+        metroLine: "المسار الأحمر",
         schedule: [
-            { departure: "07:30 صباحًا", arrival: "07:50 صباحًا" },
-            { departure: "09:30 صباحًا", arrival: "09:50 صباحًا" },
-            { departure: "11:30 صباحًا", arrival: "11:50 صباحًا" }
+            { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
+            { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
+            { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
+           
         ]
-    }
+    },
+    "محطة سابك": {
+        metroLine: "المسار البنفسجي",
+        schedule: [
+            { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
+            { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
+            { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
+           
+        ]
+    },
+       " stc محطة ": {
+        metroLine: "المسار الازرق",
+        schedule: [
+            { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
+            { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
+            { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
+           
+        ]
+    },
+   " محطة صاله مطار الملك خالد": {
+    metroLine: "المسار الاصفر",
+    schedule: [
+        { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
+            { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
+            { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
+           
+    ]
+},
+" محطة وزاره التعليم": {
+    metroLine: "المسار الاخضر",
+    schedule: [
+        { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
+        { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
+        { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
+       
+    ]
+}
+
+
 };
 
 // وظيفة البحث
