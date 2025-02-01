@@ -1,105 +1,84 @@
 
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fb;
     text-align: center;
-    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-/* العنوان الرئيسي */
-.title {
-    background-color: #66C7FF;
-    color: white;
-    padding: 20px;
-    margin: 0;
-    font-size: 24px;
-}
-
-/* تفاصيل التذكرة */
-.ticket-details {
-    margin: 20px auto;
-    padding: 20px;
+.profile-container {
     width: 80%;
-    max-width: 500px;
-    background-color: white;
+    max-width: 800px;
+    background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: right;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding-bottom: 20px;
 }
-
-.ticket-details p {
+header {
+    background-color:#FFCA7D;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-icon {
+    font-size: 30px;
+    position: absolute;
+    left: 20px;
+    background: #FFCA7D;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-details {
+    padding: 20px;
+}
+.userDetailsContiner {
+    background: #f4f6fb;
+    padding: 15px;
     margin: 10px 0;
-    font-size: 16px;
-}
-
-.ticket-details span {
-    font-weight: bold;
-    color: #0056b3;
-}
-
-/* نموذج الدفع */
-.payment-form {
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 500px;
-    background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: right;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
 }
-
-.payment-form h2 {
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #0056b3;
+.buttons {
+    margin-top: 20px;
 }
-
-.payment-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.payment-form .btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #66C7FF;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.payment-form .btn:hover {
-    background-color: #0056b3;
-}
-
-/* زر العودة */
-.back-button {
-    margin-top: 45px
-}
-
-.back-button .btn {
-    background-color: #66C7FF;
+.logout-btn, .home-btn {
+    background: #FFCA7D;
     color: white;
     text-decoration: none;
-    padding: 10px 30px;
-    border-radius: 5px;
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    width: 400px;
+    border-radius: 8px;
     font-size: 16px;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
 }
-
-.back-button:hover {
+.logout-btn:hover {
+    background:#f4a42d;
     transform: scale(1.05);
 }
-.back-button a:hover {
-    color: #0056b3;
+.home-btn:hover {
+    background: #f4a42d;
+    transform: scale(1.05);
 }
