@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملفي الشخصي</title>
+    <link rel="stylesheet" href="css/profile-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="profile-container">
+        <header>
+            ملفي الشخصي
+            <div class="profile-icon">
+                <i class="fa-solid fa-user-circle"></i>
+            </div>
+        </header>
+        <div class="profile-details">
+            <div class="userDetailsContiner">
+                <p>اسم المستخدم: <strong id="username">---</strong></p>
+            </div>
+            <div class="userDetailsContiner">
+                <p>البريد الإلكتروني: <strong id="email">---</strong></p>
+            </div>
+            <div class="userDetailsContiner">
+                <p>كلمة المرور: <strong id="password">********</strong></p>
+            </div>
+        </div>
+        <div class="buttons">
+            <a href="#" class="logout-btn" onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i> تسجيل خروج
+            </a>
+            <a href="home.html" class="home-btn">
+                <i class="fa-solid fa-arrow-left"></i> العودة إلى الصفحة الرئيسية
+            </a>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB1jy47bPjcBlr4Jg8hd63Sd-rbm9vtUH8",
+            authDomain: "rtis-database-37c28.firebaseapp.com",
+            databaseURL: "https://rtis-database-37c28-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "rtis-database-37c28",
+            storageBucket: "rtis-database-37c28.firebasestorage.app",
+            messagingSenderId: "521784594971",
+            appId: "1:521784594971:web:49a980925e27987adbdebe",
+            measurementId: "G-Y3THQQZ6WC"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                document.getElementById("username").textContent = user.displayName || "اسم المستخدم";
+                document.getElementById("email").textContent = user.email || "email@example.com";
+                document.getElementById("password").textContent = "********";
+            } else {
+                alert("يرجى تسجيل الدخول أولاً!");
+                window.location.href = "login.html";
+            }
+        });
+
+        function logout() {
+            signOut(auth).then(() => {
+                alert("تم تسجيل الخروج بنجاح!");
+                window.location.href = "login.html";
+            }).catch((error) => {
+                console.error("خطأ أثناء تسجيل الخروج:", error);
+            });
+        }
+    </script>
+</body>
+</html>
