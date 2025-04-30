@@ -1,60 +1,42 @@
 
 // بيانات المحطات
+const sharedSchedule = [
+    { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
+    { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
+    { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
+  ];
+  
 const stations = {
   
     "محطة طويق": {
         metroLine: "المسار البرتقالي",
-        schedule: [
-            { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
-            { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
-            { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
-           
-        ]
+        schedule: sharedSchedule
+
     },
     "محطة جامعة الملك سعود": {
         metroLine: "المسار الأحمر",
-        schedule: [
-            { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
-            { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
-            { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
-           
-        ]
+        schedule: sharedSchedule
+
     },
     "محطة سابك": {
         metroLine: "المسار البنفسجي",
-        schedule: [
-            { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
-            { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
-            { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
-           
-        ]
+        schedule: sharedSchedule
+
     },
        " stc محطة ": {
         metroLine: "المسار الازرق",
-        schedule: [
-            { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
-            { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
-            { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
-           
-        ]
+        schedule: sharedSchedule
+
     },
    " محطة صاله مطار الملك خالد": {
     metroLine: "المسار الاصفر",
-    schedule: [
-        { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
-            { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
-            { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
-           
-    ]
+    schedule: sharedSchedule
+
 },
 " محطة وزاره التعليم": {
     metroLine: "المسار الاخضر",
-    schedule: [
-        { departure: "06:00 صباحًا", arrival: "06:02 صباحًا" },
-        { departure: "08:03 صباحًا", arrival: "08:05 صباحًا" },
-        { departure: "12:00 مساءً", arrival: "12:02 مساءً" }
-       
-    ]
+    schedule: sharedSchedule
+
 }
 
 
