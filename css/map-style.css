@@ -51,7 +51,5 @@ body {
 
 .btn:hover {
     transform: scale(1.05);
-}
-.btn:hover {
     background-color: #342960;
 }
