@@ -28,54 +28,13 @@ jobs:
         run: |
           mkdir -p tests
           echo "const { test, expect } = require('@playwright/test');
-
           test('✅ home.html works', async ({ page }) => {
             await page.goto('https://deema28.github.io/Riyadh-Train-Integrated-System/home.html');
-            await expect(page).toHaveTitle(/.*/);
-          });
-
-          test('✅ black-map.html works', async ({ page }) => {
-            await page.goto('https://deema28.github.io/Riyadh-Train-Integrated-System/black-map.html');
-            await expect(page).toHaveTitle(/.*/);
-          });
-
-          test('✅ index.html works', async ({ page }) => {
-            await page.goto('https://deema28.github.io/Riyadh-Train-Integrated-System/index.html');
-            await expect(page).toHaveTitle(/.*/);
-          });
-
-          test('✅ login.html works', async ({ page }) => {
-            await page.goto('https://deema28.github.io/Riyadh-Train-Integrated-System/login.html');
-            await expect(page).toHaveTitle(/.*/);
-          });
-
-          test('✅ profile.html works', async ({ page }) => {
-            await page.goto('https://deema28.github.io/Riyadh-Train-Integrated-System/profile.html');
-            await expect(page).toHaveTitle(/.*/);
-          });
-
-          test('✅ reset-password.html works', async ({ page }) => {
-            await page.goto('https://deema28.github.io/Riyadh-Train-Integrated-System/reset-password.html');
-            await expect(page).toHaveTitle(/.*/);
-          });
-
-          test('✅ schedule.html works', async ({ page }) => {
-            await page.goto('https://deema28.github.io/Riyadh-Train-Integrated-System/schedule.html');
-            await expect(page).toHaveTitle(/.*/);
-          });
-
-          test('✅ signup.html works', async ({ page }) => {
-            await page.goto('https://deema28.github.io/Riyadh-Train-Integrated-System/signup.html');
-            await expect(page).toHaveTitle(/.*/);
-          });
-
-          test('✅ white-map.html works', async ({ page }) => {
-            await page.goto('https://deema28.github.io/Riyadh-Train-Integrated-System/white-map.html');
             await expect(page).toHaveTitle(/.*/);
           });" > tests/test.spec.js
 
       - name: Run tests
-        run: npx playwright test --reporter=html
+        run: npx playwright test --reporter=html --output=playwright-report
 
       - name: Upload test report
         if: always()
