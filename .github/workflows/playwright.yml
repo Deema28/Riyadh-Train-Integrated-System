@@ -36,6 +36,9 @@ jobs:
       - name: Run tests
         run: npx playwright test --reporter=html
 
+      - name: Check report exists
+        run: ls -R playwright-report
+
       - name: Upload test report
         if: always()
         uses: actions/upload-artifact@v3
