@@ -33,14 +33,12 @@ jobs:
             await expect(page).toHaveTitle(/.*/);
           });" > tests/test.spec.js
 
-      - name: Run tests and generate report
-        run: |
-          npx playwright test --reporter html
-          mv playwright-report report
+      - name: Run tests
+        run: npx playwright test --reporter=html
 
       - name: Upload test report
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: playwright-report
-          path: report
+          path: playwright-report
