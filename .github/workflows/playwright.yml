@@ -1,0 +1,43 @@
+name: Run UI Test with Playwright
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install --save-dev playwright
+        npx playwright install
+
+    - name: Create simple test
+      run: |
+        mkdir -p tests
+        echo "const { test, expect } = require('@playwright/test');
+        test('Home page loads', async ({ page }) => {
+          await page.goto('https://deema28.github.io/Riyadh-Train-Integrated-System/home.html');
+          await expect(page).toHaveTitle(/.*/);
+        });" > tests/test.spec.js
+
+    - name: Run tests
+      run: npx playwright test
+
+    - name: Upload test report
+      uses: actions/upload-artifact@v3
+      with:
+        name: playwright-report
+        path: playwright-report
